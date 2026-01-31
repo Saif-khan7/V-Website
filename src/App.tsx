@@ -58,6 +58,8 @@ export default function Page() {
           <>
             <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
             <div className="success-text">Yayayayy!!! I love you cutie patootie!!💖😘</div>
+            {/* NEW ADDITION BELOW */}
+            <div className="glove-box-text">Please open the glove box</div>
           </>
         ) : (
           <>

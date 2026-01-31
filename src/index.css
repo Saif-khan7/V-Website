@@ -10,7 +10,7 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* <--- This KILLS the scrollbars */
+  overflow: hidden;
 }
 
 /* 2. Container takes up full screen exactly */
@@ -23,7 +23,7 @@ body, html {
   width: 100vw;
   text-align: center;
   padding: 20px;
-  box-sizing: border-box; /* Ensures padding doesn't add scrollbars */
+  box-sizing: border-box;
 }
 
 /* 3. Image Styling */
@@ -41,10 +41,19 @@ body, html {
 }
 
 .success-text {
-  font-size: 1.5rem; /* Large success text */
+  font-size: 1.5rem; /* Slightly larger to stand out */
   color: #e11d48;
   font-weight: 900;
   margin-top: 20px;
+  margin-bottom: 10px; /* Add space between this and the glove box text */
+}
+
+/* NEW: Glove Box Text Style */
+.glove-box-text {
+  font-size: 1.25rem; /* Smaller than success text */
+  color: #000000;     /* Black */
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 /* 5. Buttons */
