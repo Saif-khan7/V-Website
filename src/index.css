@@ -1,0 +1,76 @@
+/* Reset default browser styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 20px; /* Added padding for mobile safety */
+}
+
+.bear-img {
+  height: 200px;
+  max-width: 100%;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* NEW: Styles for the Success Text */
+.success-text {
+    font-size: 1.5rem; /* Very large text */
+    color: #ff7291; /* Nice Love Pink/Red color */
+    font-weight: 900; /* Extra bold */
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.button-wrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.yes-button {
+  background-color: #22c55e;
+}
+.yes-button:hover {
+  background-color: #15803d;
+}
+
+.no-button {
+  background-color: #ef4444;
+}
+.no-button:hover {
+  background-color: #b91c1c;
+}
