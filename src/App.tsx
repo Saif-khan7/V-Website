@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./index.css";
 
 export default function Page() {
+  const [showIntro, setShowIntro] = useState(true);
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   const yesButtonSize = noCount * 20 + 16;
@@ -20,7 +21,7 @@ export default function Page() {
       "With a chocolate??",
       "With a flower???",
       "On my knees???",
-      "PLEASEEE?",
+      "PLEASEEE BB?",
       "I am going to die",
       "Yep im dead",
       "ok ur talking to my ghost",
@@ -35,34 +36,53 @@ export default function Page() {
 
   return (
     <div className="centered-container">
-      {yesPressed ? (
-        <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="success-text">Yayayayy!!! I love you cutie patootie!!💖😘</div>
-        </>
-      ) : (
+      {/* INTRO PAGE */}
+      {showIntro ? (
         <>
           <img
             className="bear-img"
-            src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+            src="https://media.tenor.com/Ndb7rROknSkAAAAj/bear-cute.gif" 
+            alt="Cute Bear Laughing"
           />
-          <h1 className="question-text">Will you be my Valentine?</h1>
-          <div className="button-wrap">
-            <button
-              className="yes-button"
-              style={{ fontSize: yesButtonSize }}
-              onClick={() => setYesPressed(true)}
-            >
-              Yes
-            </button>
-            <button
-              onClick={handleNoClick}
-              className="no-button"
-            >
-              {noCount === 0 ? "No" : getNoButtonText()}
-            </button>
-          </div>
+          <div className="question-text">Helloo bb!!</div>
+          <button
+            className="yes-button"
+            onClick={() => setShowIntro(false)}
+          >
+            Continue
+          </button>
         </>
+      ) : (
+        /* VALENTINE QUESTION PAGE */
+        yesPressed ? (
+          <>
+            <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
+            <div className="success-text">Yayayayy!!! I love you cutie patootie!!💖😘</div>
+          </>
+        ) : (
+          <>
+            <img
+              className="bear-img"
+              src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+            />
+            <h1 className="question-text">Will you be my Valentine?</h1>
+            <div className="button-wrap">
+              <button
+                className="yes-button"
+                style={{ fontSize: yesButtonSize }}
+                onClick={() => setYesPressed(true)}
+              >
+                Yes
+              </button>
+              <button
+                onClick={handleNoClick}
+                className="no-button"
+              >
+                {noCount === 0 ? "No" : getNoButtonText()}
+              </button>
+            </div>
+          </>
+        )
       )}
     </div>
   );
